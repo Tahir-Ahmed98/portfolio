@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Multi-theme variables (apply data-theme on <html>) */
+@import "./theme/variables.css";
+
+@theme {
+  /* Map CSS variables to Tailwind tokens; use rgb(var(...)) for opacity support */
+  --color-background: rgb(var(--color-bg));
+  --color-background-muted: rgb(var(--color-bg-muted));
+  --color-foreground: rgb(var(--color-foreground));
+  --color-foreground-muted: rgb(var(--color-foreground-muted));
+  --color-accent: rgb(var(--color-accent));
+  --color-accent-foreground: rgb(var(--color-accent-foreground));
+  --color-border: rgb(var(--color-border));
+  --color-card: rgb(var(--color-card));
+  --color-card-hover: rgb(var(--color-card-hover));
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply antialiased;
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-sans);
+  }
+  /* Focus visible for a11y */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-[rgb(var(--color-accent))];
+  }
+
+  /* Respect prefers-reduced-motion */
+  [data-reduce-motion="true"] * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
