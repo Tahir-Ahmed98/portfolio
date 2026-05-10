@@ -1,30 +1,42 @@
-import { useState, useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { Menu, X } from 'lucide-react'
-import { NAV_LINKS, SITE } from '../../content/site'
-import { ThemeToggle } from '../theme/ThemeToggle'
-import profileImage from '../../assets/mypic.png'
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { Menu, X } from "lucide-react";
+import { NAV_LINKS, SITE } from "../../content/site";
+// import { ThemeToggle } from "../theme/ThemeToggle";
+import profileImage from "../../assets/mypic.png";
 
 export function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const headerRef = useRef<HTMLElement>(null)
-  const navRef = useRef<HTMLElement>(null)
-  const linkRefs = useRef<(HTMLLIElement | null)[]>([])
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const linkRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
-    if (!headerRef.current) return
-    gsap.fromTo(headerRef.current, { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' })
-  }, [])
+    if (!headerRef.current) return;
+    gsap.fromTo(
+      headerRef.current,
+      { y: -20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+    );
+  }, []);
 
   useEffect(() => {
-    if (!mobileOpen || !navRef.current) return
-    const links = linkRefs.current.filter(Boolean) as HTMLElement[]
+    if (!mobileOpen || !navRef.current) return;
+    const links = linkRefs.current.filter(Boolean) as HTMLElement[];
     const ctx = gsap.context(() => {
-      gsap.fromTo(navRef.current, { opacity: 0, height: 0 }, { opacity: 1, height: 'auto', duration: 0.2 })
-      gsap.fromTo(links, { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.2, stagger: 0.05 })
-    })
-    return () => ctx.revert()
-  }, [mobileOpen])
+      gsap.fromTo(
+        navRef.current,
+        { opacity: 0, height: 0 },
+        { opacity: 1, height: "auto", duration: 0.2 },
+      );
+      gsap.fromTo(
+        links,
+        { opacity: 0, x: -10 },
+        { opacity: 1, x: 0, duration: 0.2, stagger: 0.05 },
+      );
+    });
+    return () => ctx.revert();
+  }, [mobileOpen]);
 
   return (
     <header
@@ -60,15 +72,19 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             type="button"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
             className="rounded p-2 md:hidden"
             onClick={() => setMobileOpen((o) => !o)}
           >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
@@ -84,7 +100,7 @@ export function Header() {
               <li
                 key={link.href}
                 ref={(el) => {
-                  linkRefs.current[i] = el
+                  linkRefs.current[i] = el;
                 }}
               >
                 <a
@@ -100,5 +116,5 @@ export function Header() {
         </nav>
       )}
     </header>
-  )
+  );
 }

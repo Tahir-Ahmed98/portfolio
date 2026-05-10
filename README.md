@@ -19,6 +19,7 @@
 This repository contains the source code for my personal developer portfolio. It is designed to be highly responsive, interactive, and beautifully crafted to provide an optimal viewing experience across all devices. Be sure to update the live demo and contact links!
 
 ### ✨ Features
+
 - **Modern UI/UX**: Clean, minimalist, and aesthetically pleasing design.
 - **Responsive Navigation**: Seamless browsing experience on mobile, tablet, and desktop displays.
 - **Projects Showcase**: Detailed section highlighting featured projects with links to source code and live demos.
@@ -27,6 +28,7 @@ This repository contains the source code for my personal developer portfolio. It
 ## 🛠️ Built With
 
 This project relies on the following core technologies:
+
 - [![React][React.js]][React-url]
 - [![TypeScript][TypeScript]][TypeScript-url]
 - [![Vite][Vite]][Vite-url]
@@ -38,6 +40,7 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 You need to have Node.js and npm (or pnpm/yarn) installed on your system.
+
 - npm
   ```sh
   npm install npm@latest -g
@@ -96,15 +99,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-**Tahir Ahmed** 
-- Twitter: [@your_twitter](https://twitter.com/your_twitter) 
-- Email: email@example.com
+**Tahir Ahmed**
+
+- Twitter: [@TahirAhmed035](https://x.com/TahirAhmed035)
+- Email: tahirahmed.bse18@gmail.com
+- Linkedin: [Tahir Ahmed](https://www.linkedin.com/in/tahir-ahmed-li/)
 
 Project Link: [https://github.com/Tahir-Ahmed98/portfolio](https://github.com/Tahir-Ahmed98/portfolio)
 
 ---
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
