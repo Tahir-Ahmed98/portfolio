@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
     id: "sprouts",
     title: "Sprouts.ai",
     description:
-      "AI-enabled ABM & GTM intelligence platform. Pre-integrated intelligent martech platform that replaces the need to buy multiple databases, intent products, and sales outreach platforms.",
+      "Landing page for Sprouts.ai, an AI-enabled ABM & GTM intelligence platform. Pre-integrated intelligent martech platform that replaces the need to buy multiple databases, intent products, and sales outreach platforms.",
     image: "https://placehold.co/800x450/6366f1/ffffff?text=Sprouts.ai",
     tags: [
       "AI",
@@ -17,10 +17,32 @@ export const PROJECTS: Project[] = [
       "Tailwind CSS",
       "SCSS",
       "TypeScript",
-      "Express JS",
     ],
     featured: true,
     liveUrl: "https://sprouts.ai/",
+  },
+  {
+    id: "sprouts",
+    title: "ABM Sprouts.ai",
+    description:
+      "AI-enabled ABM & GTM intelligence platform. Pre-integrated intelligent martech platform that replaces the need to buy multiple databases, intent products, and sales outreach platforms.",
+    image: "https://placehold.co/800x450/6366f1/ffffff?text=Sprouts.ai",
+    tags: [
+      "AI",
+      "SaaS",
+      "React",
+      "Tailwind CSS",
+      "SCSS",
+      "TypeScript",
+      "Material UI",
+      "Storybook",
+      "Redux",
+      "React testing library",
+      "git",
+      "Github",
+      "AWS",
+    ],
+    featured: true,
   },
   {
     id: "qlu.ai",

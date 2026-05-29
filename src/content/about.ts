@@ -9,7 +9,6 @@ export const ABOUT = {
   image: "https://placehold.co/600x600/6366f1/ffffff?text=TA",
   stats: [
     { value: 5, label: "Years Experience" },
-    { value: 17, label: "Features Delivered" },
     { value: 20, label: "Technologies" },
   ],
 };
