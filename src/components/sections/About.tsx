@@ -1,6 +1,5 @@
 import { Section } from "../layout/Section";
 import { AboutContent } from "../about/AboutContent";
-import { AboutStats } from "../about/AboutStats";
 import { ABOUT } from "../../content/about";
 import profileImage from "../../assets/mypic.png";
 
